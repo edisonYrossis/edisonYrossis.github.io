@@ -1,0 +1,100 @@
+---
+import JavascriptIcon from '../icons/technologies/Javascript.astro'
+import ReactIcon from '../icons/technologies/React.astro'
+import TailwindIcon from '../icons/technologies/Tailwind.astro'
+import FirebaseIcon from '../icons/technologies/Firebase.astro'
+import SocialIcon from './SocialIcon.astro'
+import GitHub from '../icons/GitHub.astro'
+
+
+const icons = {
+   Javascript: {
+        name: "JavaScript",
+        icon: JavascriptIcon,
+        color: "#"
+    },
+   React: {
+        name: "React",
+        icon: ReactIcon,
+        color: "#"
+        
+    },
+   Tailwind: {
+        name: "Tailwind",
+        icon: TailwindIcon,
+        color: "#"
+    },
+   Firebase: {
+        name: "Firebase",
+        icon: FirebaseIcon,
+        color: "#"
+    },
+    
+}
+const proyects = [
+    {
+        
+        title: "E-comerce | Osito Stuff Tienda Online",
+        description: "Una solucion de e-comerce/tienda online sencilla, para resolver lo basico. Hecho con Tailwind, React y firebase como base de datos noSQL. En este proyecto se integro conceptos como el Lazy Loading y consumir todos los productos que desde una base de datos en la nube Firebase",
+        link: "https://ositostuff.vercel.app/",
+        github: "https://github.com/edisonYrossis/osito-ecommerce",
+        image: "/proyects/eccomerce.webp",
+        tags: [icons.Javascript, icons.React, icons.Tailwind, icons.Firebase]
+
+    },
+    {
+        
+        title: "Budget App | Aplicacion para gestion gastos ",
+        description: "Aplicacion web para gestionar ingresos, gastos y presupuestos. Hecho con Tailwind, React y firebase como base de datos noSQL. En este proyecto se destaca el Responsive Design, ademas que se gestionan todas las transacciones en Firebase",
+        link: "https://budget-app-six-puce.vercel.app/",
+        github: "https://github.com/edisonYrossis/budget-app",
+        image: "/proyects/budget.webp",
+        tags: [icons.Javascript, icons.React, icons.Tailwind, icons.Firebase]
+
+    },
+   
+   
+]
+---
+
+
+
+<ol class=" flex flex-col gap-36">                  
+    {
+       proyects.map(({title, description, tags, image, link, github}) => {
+        return <article class="flex flex-col lg:flex-row gap-6">
+            <div class="flex-grow">
+                <img src={image} alt={`${title}`} >
+
+            </div>
+            <div class="w-3/5 flex flex-col gap-3">
+                <h3 class="text-2xl">{title}</h3>
+               <ul class="flex gap-2 text-wrap w-1/2">
+                {
+                    tags.map(tag => (
+                    <SocialIcon  >
+                        <tag.icon class="size-5" />
+                        <h2>{tag.name}</h2>
+                    </SocialIcon>
+                    ))
+                }
+            </ul>   
+            <p class="text-white/60 mb-3">{description}</p>
+          
+            <span class="flex gap-2">
+                <SocialIcon href={link} target="_blank" >
+                    Preview
+                </SocialIcon>
+
+                <SocialIcon href={github} target="_blank" >
+                <GitHub class="size-5" />
+                Codigo
+                 </SocialIcon>
+            </span>
+            </div>
+            
+        </article>
+       })
+    }
+</ol>
+

@@ -1,0 +1,40 @@
+---
+import LatestProyectItem from "./LatestProyectItem.astro"
+
+const ProyectList = [
+    {
+        date: "Actualmente",
+        title: "Budget App",
+        description: "This was a proyect to organise your expences and incomes",
+        link: "#"
+    },
+    {
+        date: "February 2024",
+        title: "Budget App",
+        description: "This was a proyect to organise your expences and incomes",
+        link: "#"
+    },
+    {
+        date: "February 2024",
+        title: "Budget App",
+        description: "This was a proyect to organise your expences and incomes",
+        link: "#"
+    },
+    {
+        date: "February 2024",
+        title: "Budget App",
+        description: "This was a proyect to organise your expences and incomes",
+        link: "#"
+    },
+]
+---
+
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">                  
+    {
+        ProyectList.map(p => <LatestProyectItem title={p.title} date={p.date} description={p.description} link={p.link} />
+        )
+    }
+</ol>
+
