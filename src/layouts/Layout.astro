@@ -17,8 +17,8 @@ const { title } = Astro.props;
 
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Portfolio de Edison Yadir Rossis" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -29,7 +29,7 @@ const { title } = Astro.props;
 		
 		<div class="fixed inset-0 -z-10">
 			<!-- Contenido del fondo -->
-			<div class="absolute top-0 z-[-2] h-screen w-screen bg-[#000] bg-[radial-gradient(#605f5f33_1px,#000_1px)] bg-[size:20px_20px]"></div>
+			<div class="absolute top-0 z-[-2] h-screen w-screen bg-[#000] bg-[radial-gradient(#5e5e5e7a_1px,#000_1px)] bg-[size:20px_20px]"></div>
 		</div>
 		
 		
@@ -51,14 +51,15 @@ const { title } = Astro.props;
 	
 	html {
 		font-family: 'Onest Variable' ,system-ui, sans-serif;
-		background-color: #1a1a1a;
+		background-color: #000;
 		scroll-behavior: smooth;
 		
 
 	}
 
 	body {
-		padding-top: 1.5rem;
+		padding-top: 1rem;
+		overflow: hidden;
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
