@@ -11,6 +11,8 @@ import AboutMe from '../components/AboutMe.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Proyects from '../components/Proyects.astro';
 import Header from '../components/Header.astro';
+import Technologies from '../components/Technologies.astro';
+import SkillsIcon from '../icons/SkillsIcon.astro';
 
 ---
 
@@ -84,6 +86,21 @@ import Header from '../components/Header.astro';
 			</h2>
 			<Proyects />
 		</SectionContainer>
+
+
+
+		<SectionContainer id="technologies" class="py-44">
+			 
+			<h2 class="flex justify-start items-center gap-x-3 text-3xl font-semibold pb-12 text-white/70">
+				<SkillsIcon />
+				Habilidades Tecnicas Destacadas
+			</h2>
+			<Technologies />
+		</SectionContainer>
+
+
+
+
 
 		<SectionContainer id="aboutme" class="py-44">
 			 

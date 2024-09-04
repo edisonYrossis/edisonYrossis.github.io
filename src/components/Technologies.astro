@@ -1,0 +1,76 @@
+---
+import TechonologiesItem from "./TechonologiesItem.astro"
+import {icons} from '../utils/TechIconsList'
+
+
+const Levels = {
+    Advanced: {
+        es: "Avanzado",
+        en: "Advanced"
+    },
+    Intermediate: {
+        es: "Intermedio",
+        en: "Intermediate"
+    },
+    Basic: {
+        es: "Basico",
+        en: "Basic"
+    },
+
+}
+
+
+const TechnologiesList = [
+    {
+        level: Levels.Advanced.es,
+        name: "React",
+        description: "Frontend",
+        icon: icons.React,
+        stars: 5,
+
+    },
+    {
+        level:Levels.Advanced.es,
+        name: "JavaScript",
+        description: "Frontend / Backend",
+        icon: icons.Javascript,
+        stars: 5,
+
+    },
+    {
+        level: Levels.Advanced.es,
+        name: "Tailwind",
+        description: "Estilos CSS",
+        icon: icons.Tailwind,
+        stars: 5,
+
+    },
+    {
+        level: Levels.Intermediate.es,
+        name: "Typescript",
+        description: "Frontend",
+        icon: icons.Typescript,
+        stars: 4,
+
+    },
+    {
+        level: Levels.Basic.es,
+        name: "Node",
+        description: "Backend",
+        icon: icons.Node,
+        stars: 3,
+
+    },
+    
+]
+---
+
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">                  
+    {
+        TechnologiesList.map(p => <TechonologiesItem name={p.name} level={p.level} description={p.description} stars={p.stars} icon={p.icon} />
+        )
+    }
+</ol>
+
